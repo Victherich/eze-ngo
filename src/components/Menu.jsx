@@ -16,37 +16,43 @@ const slideUp = keyframes`
 
 const MenuContainer = styled.div`
   position: fixed;
-  top: 90px;
+  top: 70px;
   right: 10px;
   z-index: 1000;
 
 
   @media(max-width:768px){
-    top:10px;
+    top:70px;
 
     span{
         display:none;
     }
   }
 
+  @media(max-width:320px){
+    top:90px;
+  }
   
 `;
 
 const MenuButton = styled.div`
 //   background: #ff5722;
-  background:#3498db;
+  // background:#3498db;
+  background:#119458;
   color: white;
   font-size: 18px;
   font-weight: bold;
   padding: 12px 20px;
   border-radius: 25px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
   cursor: pointer;
   user-select: none;
   transition: 0.3s;
+  display:none;
 
   @media(max-width:768px){
     padding:6px 10px;
+    display:block;
   }
   
   &:hover {
@@ -79,7 +85,7 @@ const MenuItem = styled.li`
   gap: 10px;
   cursor: pointer;
   transition: 0.3s;
-  color: #333;
+  color: #000050;
   
   &:hover {
     background: lightgray;
@@ -90,9 +96,9 @@ const MenuItem = styled.li`
 const menuItems = [
   { name: "🏠 Home", link: "/" },
   { name: "ℹ️ About Us", link: "/aboutus" },
-  { name: "🛡️ Our Recognition", link: "/authenticity" },
-  {name:"🏛️ INEC Engagement" , link:"/inecengagement"},
-  { name: "🖼️ Gallery", link: "/gallery" },
+  // { name: "🛡️ Our Recognition", link: "/authenticity" },
+  // {name:"🏛️ INEC Engagement" , link:"/inecengagement"},
+  { name: "🖼️ Gallery & Awards", link: "/gallery" },
   { name: "💖 Donate", link: "/donate" },
     { name: "📚 Blogs", link: "/blogs" },
    

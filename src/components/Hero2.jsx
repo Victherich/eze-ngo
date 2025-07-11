@@ -2,35 +2,36 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';  
-// import car1 from '../Images/car1.jpeg';
-// import car2 from '../Images/car2.jpeg';
-// import car3 from '../Images/car3.jpeg';
-// import car4 from '../Images/car4.jpeg';
-// import car5 from '../Images/car5.jpeg';
-// import car6 from '../Images/car6.jpeg';
-// import car7 from '../Images/car7.jpeg';
-// import car12 from '../Images/car12.jpg';
-// import car13 from '../Images/car15.png';
-// import car22 from '../Images/car22.jpg';
-// import car21 from '../Images/car21.jpg';
-// import car18 from '../Images/car18.jpg';
-
-import car3 from '../Images/ab3.jpg';
-import car4 from '../Images/ab4.jpg';
-import car5 from '../Images/ab5.jpg';
-import car6 from '../Images/ab6.jpg';
-import car7 from '../Images/ab7.jpg';
-import car12 from '../Images/ab8.jpg';
-import im1 from '../Images/im1.jpeg'
-import im3 from '../Images/im3.jpeg'
-import im4 from '../Images/im4.jpeg'
-import im6 from '../Images/im6.jpeg'
-import election from '../Images/election.jpeg'
-import launch from '../Images/launch.jpeg'
-
-
-// import { useSelector } from 'react-redux';
-
+import p1 from '../Images2/p (1).jpeg'
+import p2 from '../Images2/p (2).jpeg'
+import p3 from '../Images2/p (3).jpeg'
+import p4 from '../Images2/p (4).jpeg'
+import p5 from '../Images2/p (5).jpeg'
+import p6 from '../Images2/p (6).jpeg'
+import p7 from '../Images2/p (7).jpeg'
+import p8 from '../Images2/p (8).jpeg'
+import p9 from '../Images2/p (9).jpeg'
+import p10 from '../Images2/p (10).jpeg'
+import p11 from '../Images2/p (11).jpeg'
+import p12 from '../Images2/p (12).jpeg'
+import p13 from '../Images2/p (13).jpeg'
+import p14 from '../Images2/p (14).jpeg'
+import p15 from '../Images2/p (15).jpeg'
+import p16 from '../Images2/p (16).jpeg'
+import p17 from '../Images2/p (17).jpeg'
+import p18 from '../Images2/p (18).jpeg'
+import p19 from '../Images2/p (19).jpeg'
+import p20 from '../Images2/p (20).jpeg'
+import p21 from '../Images2/p (21).jpeg'
+import p22 from '../Images2/p (22).jpeg'
+import p23 from '../Images2/p (23).jpeg'
+import p24 from '../Images2/p (24).jpeg'
+import p25 from '../Images2/p (25).jpeg'
+import p26 from '../Images2/p (26).jpeg'
+import p27 from '../Images2/p (27).jpeg'
+import p28 from '../Images2/p (28).jpeg'
+import p29 from '../Images2/p (29).jpeg'
+import p30 from '../Images2/p (30).jpeg'
 
 
 // Styled Components
@@ -134,21 +135,14 @@ const Hero2 = () => {
   const sliderRef = useRef(null);
   const [position, setPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-//   const theme = useSelector((state)=>state.theme)
 
-  const carImages = [im1, car3,im3, car4,im4, car5,im6, car6, car7, car12];
-//   const carImages2 = [ car13, car22, car21, car18];
 
-//   const [carImages,setCarImages]=useState(carImages2)
+ const carImages = [
+  p1, p2, p3, p4, p5, p6, p7, p8, p9, p10,
+  p11, p12, p13, p14, p15, p16, p17, p18, p19, p20,
+  p21, p22, p23, p24, p25, p26, p27, p28, p29, p30
+];
 
-//   useEffect(()=>{
-//     if(theme){
-//       setCarImages(carImages2)
-//     } else{
-//       setCarImages(carImages1)
-//     }
-
-//   },[theme])
   
 
   useEffect(() => {

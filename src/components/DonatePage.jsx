@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Swal from "sweetalert2";
 import PaystackPop from "@paystack/inline-js";
 import bg from '../Images/money.png'
+import DonationPage2 from "./DonationPage2";
 
 // Styled Components
 const PageWrapper = styled.div`
@@ -52,7 +53,7 @@ const FormContainer = styled.div`
 const FormTitle = styled.h2`
   text-align: center;
   margin-bottom: 20px;
-  color: rgba(0,0,255,0.5);
+  color: #119458;
 `;
 
 const FormInput = styled.input`
@@ -65,7 +66,7 @@ const FormInput = styled.input`
 `;
 
 const DonateButton = styled.button`
-  background: rgba(0,0,255,0.5);
+  background: #119458;
   color: white;
   padding: 10px;
   font-size: 16px;
@@ -78,9 +79,16 @@ const DonateButton = styled.button`
   transition: 0.3s;
 
   &:hover {
-    background:rgba(0,0,255,0.7);
+    background:gray;
   }
 `;
+
+const Div = styled.div`
+  padding:50px 20px;
+  @media(max-width:768px){
+  padding:50px 5px;
+  }
+`
 
 // Donate Page Component
 const DonatePage = () => {
@@ -149,7 +157,7 @@ const DonatePage = () => {
       </HeroSection>
 
       {/* Donation Form Section */}
-      <FormSection>
+      {/* <FormSection>
         <FormContainer>
           <FormTitle>Make a Donation</FormTitle>
           <form>
@@ -162,7 +170,14 @@ const DonatePage = () => {
             </DonateButton>
           </form>
         </FormContainer>
-      </FormSection>
+      </FormSection> */}
+      <Div>
+ <DonationPage2/>
+      </Div>
+     
+
+
+
     </PageWrapper>
   );
 };

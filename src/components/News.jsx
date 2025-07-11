@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import e1 from '../Images/e1.jpg'
-import e2 from '../Images/e2.jpg'
-import e3 from '../Images/e3.jpg'
+import e1 from '../Images2/p (42).jpeg'
+import e2 from '../Images2/p (43).jpeg'
+import e3 from '../Images2/p (44).jpeg'
 
 // Styled Components
 const NewsSection = styled.section`
   background: #fff;
   padding: 80px 20px;
   text-align: center;
+  border-bottom:4px solid #000050;
 `;
 
 const Container = styled.div`
@@ -25,7 +26,7 @@ const Title = styled.h2`
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: rgba(0,0,255,0.5);
+  color: #119458;
   letter-spacing: 2px;
 `;
 
@@ -50,7 +51,7 @@ const NewsCard = styled.div`
 
   &:hover {
     transform: translateY(-5px);
-    background: rgba(0,0,255,0.5);
+    background: #119458;
     color: white;
   }
 `;
@@ -67,7 +68,7 @@ const NewsTitle = styled.h3`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-//   color:#555;
+  // color:#000050;
 `;
 
 const NewsText = styled.p`
@@ -99,29 +100,30 @@ const ReadMoreButton = styled.a`
 
 // News Component
 const News = () => {
-  const newsItems = [
-    {
-      id: 1,
-      image: e1,
-      title: "Our Recent Outreach Program Was a Huge Success!",
-      description: "We reached several families in need, providing food, medical aid, and education support.",
-      link: "/news1",
-    },
-    {
-      id: 2,
-      image: e2,
-      title: "Join Our Upcoming Volunteer Training",
-      description: "Contact us to become a volunteer and make a direct impact on communities in need.",
-      link: "/news2",
-    },
-    {
-      id: 3,
-      image: e3,
-      title: "New Healthcare Initiative!",
-      description: "We wish to launch a free healthcare program to provide medical services to underprivileged areas.",
-      link: "/news3",
-    },
-  ];
+ const newsItems = [
+  {
+    id: 1,
+    image: e1,
+    title: "Smiles All Around at Our Community Wellness Drive 😊",
+    description: "Hundreds received free check-ups, nutritional guidance, and emotional support during our latest health drive.",
+    link: "/news1",
+  },
+  {
+    id: 2,
+    image: e2,
+    title: "Volunteer Bootcamp: Train to Transform Lives 💪",
+    description: "We’re hosting a hands-on session to empower new volunteers—learn how to lead, uplift, and create change.",
+    link: "/news2",
+  },
+  {
+    id: 3,
+    image: e3,
+    title: "Launching Mobile Clinics for Remote Villages 🚑",
+    description: "Our upcoming program will bring vital healthcare access to families far from hospitals and health posts.",
+    link: "/news3",
+  },
+];
+
 
   return (
     <NewsSection id="news">

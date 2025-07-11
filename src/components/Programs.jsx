@@ -1,12 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import { FaBookOpen, FaHeartbeat, FaSeedling, FaUsers } from "react-icons/fa";
+import p35 from '../Images2/p35.jpeg'
+
 
 // Styled Components
 const ProgramsSection = styled.section`
-  background: #fff;
-  padding: 80px 20px;
+  background: url(${p35}) center/cover no-repeat;
+  position: relative;
+  padding: 100px 20px;
   text-align: center;
+  overflow: hidden;
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 0;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  position: relative;
+  z-index: 1;
 `;
 
 const Container = styled.div`
@@ -19,80 +37,76 @@ const Container = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: rgba(0,0,255,0.5);
+  color: white;
   letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 `;
 
 const Subtitle = styled.p`
   font-size: 18px;
   max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  color: #555;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+  color: #f1f1f1;
+  font-weight:500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 `;
 
 const ProgramCard = styled.div`
-  background: #f9f9f9;
+  background: rgba(0, 0, 0, 0.25);
+  // background:rgba(0,255,0,0.3);
+  backdrop-filter: blur(10px);
   padding: 30px;
   width: 260px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
-  transition: 0.3s;
-  color: #555;
-  
+  transition: transform 0.3s ease, background 0.3s ease;
+  color: #333;
+  border:1px solid white;
+
   &:hover {
-    transform: scale(1.05);
-    background: rgba(0,0,255,0.5);
-    color: white;
+    transform: translateY(-10px);
+    // background: rgba(255, 255, 255, 0.4);
   }
 `;
 
 const Icon = styled.div`
   font-size: 50px;
-  color: rgba(0,0,255,0.5);
+  color: lightgray;
   margin-bottom: 15px;
-  transition: 0.3s;
-  
-  ${ProgramCard}:hover & {
-    color: white;
-  }
 `;
 
 const ProgramTitle = styled.h3`
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: white;
 `;
 
 const ProgramText = styled.p`
   font-size: 16px;
-  color: #666;
-  transition: 0.3s;
-  
-  ${ProgramCard}:hover & {
-    color: white;
-  }
+  color: white;
 `;
 
 const ReadMoreButton = styled.a`
   display: inline-block;
-  background: #e67e22;
+  background: #0047ab;
   color: white;
   padding: 10px 20px;
   font-size: 14px;
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 10px;
-  transition: 0.3s;
+  margin-top: 15px;
+  transition: background 0.3s;
 
   &:hover {
-    background: #d35400;
+    background: #003080;
   }
 `;
 
@@ -100,53 +114,54 @@ const ReadMoreButton = styled.a`
 const Programs = () => {
   return (
     <ProgramsSection id="programs">
-      <Title>Our Programs & Initiatives 🌍</Title>
-      <Subtitle>
-        We are committed to improving lives through various community-driven programs.
-        Explore our key initiatives and see how we make a difference.
-      </Subtitle>
+      <ContentWrapper>
+        <Title>Programs That Change Lives 🌟</Title>
+        <Subtitle>
+          Our initiatives bring real change through education, health services, environmental efforts, and empowering communities.
+        </Subtitle>
 
-      <Container>
-        {/* Education Program */}
-        <ProgramCard>
-          <Icon><FaBookOpen /></Icon>
-          <ProgramTitle>Education for All 📚</ProgramTitle>
-          <ProgramText>
-            Providing quality education to underprivileged children.
-          </ProgramText>
-          {/* <ReadMoreButton href="/education">Learn More ➜</ReadMoreButton> */}
-        </ProgramCard>
+        <Container>
+          {/* Education Program */}
+          <ProgramCard>
+            <Icon><FaBookOpen /></Icon>
+            <ProgramTitle>Unlocking Education 📖</ProgramTitle>
+            <ProgramText>
+              Giving children the tools and opportunities to learn, grow, and thrive through inclusive education programs.
+            </ProgramText>
+            {/* <ReadMoreButton href="/education">Learn More ➜</ReadMoreButton> */}
+          </ProgramCard>
 
-        {/* Healthcare Program */}
-        <ProgramCard>
-          <Icon><FaHeartbeat /></Icon>
-          <ProgramTitle>Healthcare & Wellness ❤️</ProgramTitle>
-          <ProgramText>
-            Offering free medical checkups and health awareness.
-          </ProgramText>
-          {/* <ReadMoreButton href="/healthcare">Learn More ➜</ReadMoreButton> */}
-        </ProgramCard>
+          {/* Healthcare Program */}
+          <ProgramCard>
+            <Icon><FaHeartbeat /></Icon>
+            <ProgramTitle>Health Access for All 🏥</ProgramTitle>
+            <ProgramText>
+              Delivering essential medical support, awareness, and wellness to underserved communities.
+            </ProgramText>
+            {/* <ReadMoreButton href="/healthcare">Discover ➜</ReadMoreButton> */}
+          </ProgramCard>
 
-        {/* Sustainability Program */}
-        <ProgramCard>
-          <Icon><FaSeedling /></Icon>
-          <ProgramTitle>Environment & Sustainability 🌱</ProgramTitle>
-          <ProgramText>
-            Promoting tree planting and clean energy solutions.
-          </ProgramText>
-          {/* <ReadMoreButton href="/sustainability">Learn More ➜</ReadMoreButton> */}
-        </ProgramCard>
+          {/* Sustainability Program */}
+          <ProgramCard>
+            <Icon><FaSeedling /></Icon>
+            <ProgramTitle>Green Planet Initiative 🌱</ProgramTitle>
+            <ProgramText>
+              Creating a sustainable future through environmental education, clean energy, and tree planting.
+            </ProgramText>
+            {/* <ReadMoreButton href="/sustainability">Explore ➜</ReadMoreButton> */}
+          </ProgramCard>
 
-        {/* Women Empowerment Program */}
-        <ProgramCard>
-          <Icon><FaUsers /></Icon>
-          <ProgramTitle>Women Empowerment 👩‍💼</ProgramTitle>
-          <ProgramText>
-            Supporting women through training and business funding.
-          </ProgramText>
-          {/* <ReadMoreButton href="/women-empowerment">Learn More ➜</ReadMoreButton> */}
-        </ProgramCard>
-      </Container>
+          {/* Women Empowerment Program */}
+          <ProgramCard>
+            <Icon><FaUsers /></Icon>
+            <ProgramTitle>Empower Her 🌼</ProgramTitle>
+            <ProgramText>
+              Training, mentoring, and investing in women to lead change and drive local economic growth.
+            </ProgramText>
+            {/* <ReadMoreButton href="/women-empowerment">Get Involved ➜</ReadMoreButton> */}
+          </ProgramCard>
+        </Container>
+      </ContentWrapper>
     </ProgramsSection>
   );
 };

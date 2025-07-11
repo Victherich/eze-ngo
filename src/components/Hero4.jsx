@@ -2,19 +2,37 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';  
-// import car1 from '../Images/ab1.jpeg';
-// import car2 from '../Images/ab2.jpeg';
-import car3 from '../Images/ab3.jpg';
-import car4 from '../Images/ab4.jpg';
-import car5 from '../Images/ab5.jpg';
-import car6 from '../Images/ab6.jpg';
-import car7 from '../Images/ab7.jpg';
-import car12 from '../Images/ab8.jpg';
-// import car13 from '../Images/car15.png';
-// import car22 from '../Images/car22.jpg';
-// import car21 from '../Images/car21.jpg';
-// import car18 from '../Images/car18.jpg';
-// import { useSelector } from 'react-redux';
+import p1 from '../Images2/r (3).jpeg'
+import p2 from '../Images2/p (2).jpeg'
+import p3 from '../Images2/p (3).jpeg'
+import p4 from '../Images2/p (4).jpeg'
+import p5 from '../Images2/p (5).jpeg'
+import p6 from '../Images2/p (6).jpeg'
+import p7 from '../Images2/p (7).jpeg'
+import p8 from '../Images2/p (8).jpeg'
+import p9 from '../Images2/p (9).jpeg'
+import p10 from '../Images2/p (10).jpeg'
+import p11 from '../Images2/p (11).jpeg'
+import p12 from '../Images2/p (12).jpeg'
+import p13 from '../Images2/p (13).jpeg'
+import p14 from '../Images2/p (14).jpeg'
+import p15 from '../Images2/p (15).jpeg'
+import p16 from '../Images2/p (16).jpeg'
+import p17 from '../Images2/p (17).jpeg'
+import p18 from '../Images2/p (18).jpeg'
+import p19 from '../Images2/p (19).jpeg'
+import p20 from '../Images2/p (20).jpeg'
+import p21 from '../Images2/p (21).jpeg'
+import p22 from '../Images2/p (22).jpeg'
+import p23 from '../Images2/p (23).jpeg'
+import p24 from '../Images2/p (24).jpeg'
+import p25 from '../Images2/p (25).jpeg'
+import p26 from '../Images2/p (26).jpeg'
+import p27 from '../Images2/p (27).jpeg'
+import p28 from '../Images2/p (28).jpeg'
+import p29 from '../Images2/p (29).jpeg'
+import p30 from '../Images2/p (30).jpeg'
+
 
 
 
@@ -24,7 +42,7 @@ const HeroContainer = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 35vh;
+  height: 60vh;
   background: linear-gradient(90deg, #0f172a, #1e293b);
   overflow: hidden;
   color: #ffffff;
@@ -49,12 +67,11 @@ const HeroTitle = styled.h1`
   font-weight: bold;
   color: white;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   opacity: 0;
   transform: translateY(50px);
   animation: ${(props) => props.isVisible ? 'flyInFromBottom 3s ease-out forwards' : 'none'};
-     font-style: italic;
-  font-family: "Brush Script MT", "Brush Script Std", cursive;
+
 
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -126,21 +143,18 @@ const Hero4 = () => {
   const sliderRef = useRef(null);
   const [position, setPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-//   const theme = useSelector((state)=>state.theme)
 
-  const carImages = [ car3, car4, car5, car6, car7, car12];
-//   const carImages2 = [ car13, car22, car21, car18];
 
-//   const [carImages,setCarImages]=useState(carImages2)
+  const carImages = [
+   p1, 
+ ];
 
-//   useEffect(()=>{
-//     if(theme){
-//       setCarImages(carImages2)
-//     } else{
-//       setCarImages(carImages1)
-//     }
+//    const carImages = [
+//    p1, p2, p3, p4, p5, p6, p7, p8, p9, p10,
+//    p11, p12, p13, p14, p15, p16, p17, p18, p19, p20,
+//    p21, p22, p23, p24, p25, p26, p27, p28, p29, p30
+//  ];
 
-//   },[theme])
   
 
   useEffect(() => {
@@ -180,7 +194,7 @@ const Hero4 = () => {
   return (
     <HeroContainer ref={sliderRef}>
       <HeroContent>
-        <HeroTitle isVisible={isVisible}>OUR ARTISTIC GALLERY</HeroTitle>
+        <HeroTitle isVisible={isVisible}>EXPLORE OUR GALLERY</HeroTitle>
         {/* <HeroSubtitle isVisible={isVisible}>
           Transforming Africa’s Transportation, Infrastructure & Energy Landscape.
         </HeroSubtitle> */}

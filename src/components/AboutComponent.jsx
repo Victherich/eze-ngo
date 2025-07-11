@@ -1,15 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { FaHandsHelping, FaGlobeAfrica, FaUsers } from "react-icons/fa";
-// import ab1 from '../Images/ab1.jpg'
-// import ab2 from '../Images/ab2.jpg'
-import ab1 from '../Images/election.jpeg'
-import ab2 from '../Images/launch.jpeg'
+import ab1 from '../Images2/ab1.jpeg'; // Your new foundation image
 
 // Styled Components
 const AboutSection = styled.section`
-  background: #f9f9f9;
+  background:rgba(0,255,0,0.1);
   padding: 80px 20px;
+  // color: white;
   text-align: center;
 `;
 
@@ -32,21 +30,21 @@ const LeftContent = styled.div`
 const Title = styled.h2`
   font-size: 32px;
   font-weight: bold;
-  color:rgba(0,0,255,0.5);
+  color: #119458;
   text-transform: uppercase;
   margin-bottom: 10px;
 `;
 
 const Subtitle = styled.p`
   font-size: 18px;
-  color: #555;
+  // color: #ddd;
   line-height: 1.6;
   margin-bottom: 20px;
 `;
 
 const ReadMoreButton = styled.a`
   display: inline-block;
-  background: rgba(0,0,255,0.5);
+  background:#119458;
   color: white;
   padding: 12px 25px;
   font-size: 16px;
@@ -56,7 +54,7 @@ const ReadMoreButton = styled.a`
   transition: 0.3s;
 
   &:hover {
-    background: rgba(0,0,255,0.7);
+    background: gray; /* Lighter gold on hover */
   }
 `;
 
@@ -64,21 +62,17 @@ const RightContent = styled.div`
   flex: 1;
   min-width: 300px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
 `;
 
 const ImageCard = styled.div`
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 400px;
   background: url(${(props) => props.img}) no-repeat center center/cover;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  background-position:top;
 `;
 
-// Icon Cards
 const IconCardContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -95,14 +89,14 @@ const IconCard = styled.div`
 
 const Icon = styled.div`
   font-size: 40px;
-  color: rgba(0,0,255,0.5);
+  color:#119458;
   margin-bottom: 10px;
 `;
 
 const IconText = styled.p`
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+
 `;
 
 // About Us Component
@@ -112,14 +106,13 @@ const AboutComponent = () => {
       <Container>
         {/* Left Content */}
         <LeftContent>
-          <Title>About Eze Mbionwu Foundation 🎗️</Title>
+          <Title>About IKUKU-OMA IDEMILI FOUNDATION 🌟</Title>
           <Subtitle>
-            We are committed to empowering communities and creating stability through education, healthcare, and development programs.  
-            Our mission is to uplift lives and provide opportunities for those in need.  
+            Our foundation is dedicated to empowering communities by creating lasting change through education, healthcare, and sustainable development programs. 
+            We strive to uplift individuals, families, and communities across various regions, focusing on providing opportunities for those in need.
           </Subtitle>
           <Subtitle>
-            🌍 Operating across multiple regions, we have impacted lives through education, medical aids, and supporting
-            sustainable development projects.  
+            🌍 With a mission to foster global impact, we work across multiple countries, enhancing lives through vital programs that focus on education, health, and community growth.
           </Subtitle>
           <ReadMoreButton href="/aboutus">Read More ➜</ReadMoreButton>
         </LeftContent>
@@ -127,7 +120,6 @@ const AboutComponent = () => {
         {/* Right Content */}
         <RightContent>
           <ImageCard img={ab1} />
-          <ImageCard img={ab2} />
         </RightContent>
       </Container>
 
@@ -139,11 +131,11 @@ const AboutComponent = () => {
         </IconCard>
         <IconCard>
           <Icon><FaGlobeAfrica /></Icon>
-          <IconText>5+ Countries</IconText>
+          <IconText>6+ Countries</IconText>
         </IconCard>
         <IconCard>
           <Icon><FaUsers /></Icon>
-          <IconText>5,000+ Lives Impacted</IconText>
+          <IconText>10,000+ Lives Impacted</IconText>
         </IconCard>
       </IconCardContainer>
     </AboutSection>

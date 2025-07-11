@@ -20,7 +20,7 @@ const Title = styled.h2`
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: rgba(0,0,255,0.5);
+  color: #119458;
   letter-spacing: 2px;
 `;
 
@@ -33,13 +33,13 @@ const Subtitle = styled.p`
 `;
 
 const TestimonialCard = styled.div`
-  background: white;
+  background: lightgray;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin: 10px;
-  max-width:600px;
+  max-width:300px;
 `;
 
 const ProfileImage = styled.img`
@@ -56,7 +56,7 @@ const Name = styled.h3`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #333;
+  color: #119458;
 `;
 
 const Role = styled.p`
@@ -67,7 +67,7 @@ const Role = styled.p`
 
 const Feedback = styled.p`
   font-size: 16px;
-  color: #555;
+  color: #222;
   line-height: 1.5;
 `;
 

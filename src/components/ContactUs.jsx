@@ -249,6 +249,7 @@ import bg from "../Images/4146.jpg";
 const PageWrapper = styled.div`
   font-family: Arial, sans-serif;
   background: #f9f9f9;
+  padding-top:80px;
 `;
 
 // Hero Section
@@ -256,7 +257,8 @@ const HeroSection = styled.div`
   background: url(${bg}) center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 150px 20px;
+  padding: 200px 20px;
+  // padding-top:400px;
 
   @media(max-width:768px){
     padding-top: 200px;
@@ -292,7 +294,7 @@ const FormContainer = styled.div`
 const FormTitle = styled.h2`
   text-align: center;
   margin-bottom: 20px;
-  color: rgba(0,0,255,0.5);
+  color:#119458;
 `;
 
 const FormInput = styled.input`
@@ -315,7 +317,7 @@ const FormTextArea = styled.textarea`
 `;
 
 const SubmitButton = styled.button`
-  background: rgba(0,0,255,0.5);
+  background:#119458;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -326,7 +328,7 @@ const SubmitButton = styled.button`
   width: 100%;
 
   &:hover {
-    background: rgba(0,0,255,0.7);
+    background: gray;
   }
 `;
 
@@ -353,7 +355,7 @@ const ContactUs = () => {
 
     // API request to send message
     try {
-      const response = await fetch("https://www.ezembionwufoundation.org/api/contact_form_endpoint.php", {
+      const response = await fetch("https://ikukuomaidemili.com/api/contact_form_endpoint.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

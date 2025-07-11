@@ -14,7 +14,7 @@ const Title = styled.h2`
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: rgba(0,0,255,0.5);
+  color: #119458;
   letter-spacing: 2px;
 `;
 
@@ -43,7 +43,7 @@ const QuestionBox = styled.div`
   color:#555;
 
   &:hover {
-    background: rgba(0,0,255,0.5);
+    background: #119458;
     color: white;
   }
 `;
@@ -80,8 +80,8 @@ const FAQ = () => {
 
   const faqItems = [
     {
-      question: "What is EZE MBIONWU FOUNDATION?",
-      answer: "EZE MBIONWU FOUNDATION is a non-profit organization dedicated to community development and stability, providing aid in education, healthcare, and social services.",
+      question: "What is IKUKU-OMA IDEMILI FOUNDATION?",
+      answer: "IKUKU-OMA IDEMILI FOUNDATION is a non-profit organization dedicated to community development and stability, providing aid in education, healthcare, and social services.",
     },
     {
       question: "How can I donate?",
